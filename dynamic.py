@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 import sys
 
@@ -6,4 +7,4 @@ texFiles = filter(lambda x: '.tex' == x[-4:], os.listdir(folderName))
 exclusions = []
 for exclusion in exclusions: texFiles.remove(exclusion)
 for texFile in sorted(texFiles):
-	print '\input{{{}}}'.format(folderName + "/" + texFile)
+	print('\input{{{}}}'.format(folderName + "/" + texFile))
